@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="compassBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#35244A"/>
+      <stop offset="100%" stop-color="#1A1125"/>
+    </radialGradient>
+    <linearGradient id="needleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#A259FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" fill="transparent"/>
+
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="80" fill="url(#compassBg)" stroke="#A259FF" stroke-width="4"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="5 5">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Center elements -->
+  <circle cx="100" cy="100" r="10" fill="#FBF8FF"/>
+  <circle cx="100" cy="100" r="4" fill="#35244A"/>
+
+  <!-- Compass Star -->
+  <path d="M100 30 L112 88 L170 100 L112 112 L100 170 L88 112 L30 100 L88 88 Z" fill="#35244A" stroke="#A259FF" stroke-width="2"/>
+  
+  <!-- Glowing Needle -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100; 15 100 100; -5 100 100; 0 100 100" dur="4s" repeatCount="indefinite" keyTimes="0; 0.4; 0.8; 1"/>
+    <path d="M100 30 L110 100 L100 170 L90 100 Z" fill="url(#needleGrad)"/>
+    <path d="M100 30 L110 100 L100 100 Z" fill="#00F0FF" opacity="0.6"/> <!-- Highlight -->
+  </g>
+  
+  <!-- Constellation dots -->
+  <circle cx="60" cy="60" r="3" fill="#00F0FF" opacity="0.8"/>
+  <circle cx="140" cy="60" r="2" fill="#FBF8FF" opacity="0.5"/>
+  <circle cx="140" cy="140" r="3.5" fill="#A259FF" opacity="0.9"/>
+  <circle cx="60" cy="140" r="2" fill="#00F0FF" opacity="0.6"/>
+</svg>

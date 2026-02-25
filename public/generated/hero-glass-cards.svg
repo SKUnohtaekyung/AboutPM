@@ -1,0 +1,50 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="120" y1="120" x2="1280" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080811" />
+      <stop offset="1" stop-color="#12092A" />
+    </linearGradient>
+    <linearGradient id="cardA" x1="380" y1="170" x2="640" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9B86FF" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#5A41D4" stop-opacity="0.38" />
+    </linearGradient>
+    <linearGradient id="cardB" x1="620" y1="200" x2="890" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8A78FF" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#6A5BDA" stop-opacity="0.33" />
+    </linearGradient>
+    <linearGradient id="cardC" x1="840" y1="165" x2="1150" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AD98FF" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#6B56DF" stop-opacity="0.36" />
+    </linearGradient>
+    <filter id="blurGlow" x="0" y="0" width="1400" height="860" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+  </defs>
+
+  <rect width="1400" height="860" rx="42" fill="url(#bgGrad)" />
+  <ellipse cx="750" cy="550" rx="470" ry="190" fill="#774DFF" fill-opacity="0.14" filter="url(#blurGlow)" />
+
+  <g transform="translate(220 180) rotate(-8)">
+    <rect x="0" y="115" width="350" height="465" rx="38" fill="#1A1730" fill-opacity="0.62" stroke="#7E69F8" stroke-opacity="0.35" />
+    <rect x="0" y="0" width="350" height="465" rx="38" fill="url(#cardA)" stroke="#C6B8FF" stroke-opacity="0.42" />
+    <text x="42" y="118" fill="#F4F1FF" fill-opacity="0.93" font-size="58" font-family="Sora, Arial, sans-serif" font-weight="700">Design</text>
+    <text x="42" y="176" fill="#E3DCFF" fill-opacity="0.9" font-size="58" font-family="Sora, Arial, sans-serif" font-weight="700">Deck</text>
+    <text x="42" y="390" fill="#D0C4FF" fill-opacity="0.92" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="400">01</text>
+  </g>
+
+  <g transform="translate(490 145) rotate(-2)">
+    <rect x="0" y="95" width="360" height="480" rx="38" fill="#1A1730" fill-opacity="0.58" stroke="#806DF5" stroke-opacity="0.3" />
+    <rect x="0" y="0" width="360" height="480" rx="38" fill="url(#cardB)" stroke="#CABDFF" stroke-opacity="0.46" />
+    <text x="44" y="126" fill="#F6F3FF" fill-opacity="0.95" font-size="56" font-family="Sora, Arial, sans-serif" font-weight="700">PM</text>
+    <text x="44" y="183" fill="#EFE8FF" fill-opacity="0.93" font-size="56" font-family="Sora, Arial, sans-serif" font-weight="700">Strategy</text>
+    <text x="44" y="404" fill="#D6CBFF" fill-opacity="0.95" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="400">02</text>
+  </g>
+
+  <g transform="translate(760 110) rotate(5)">
+    <rect x="0" y="120" width="360" height="500" rx="38" fill="#18172D" fill-opacity="0.56" stroke="#7D66F6" stroke-opacity="0.28" />
+    <rect x="0" y="0" width="360" height="500" rx="38" fill="url(#cardC)" stroke="#D0C5FF" stroke-opacity="0.48" />
+    <text x="42" y="130" fill="#FAF7FF" fill-opacity="0.96" font-size="52" font-family="Sora, Arial, sans-serif" font-weight="700">Frontend</text>
+    <text x="42" y="186" fill="#F2ECFF" fill-opacity="0.95" font-size="52" font-family="Sora, Arial, sans-serif" font-weight="700">Delivery</text>
+    <text x="42" y="426" fill="#E0D8FF" fill-opacity="0.95" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="400">03</text>
+  </g>
+</svg>

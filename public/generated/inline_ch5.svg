@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <rect width="800" height="250" fill="transparent"/>
+  
+  <g transform="translate(50, 40)">
+    <!-- Horizontal Funnel Stages -->
+    
+    <!-- Acquisition -->
+    <polygon points="0,0 120,20 120,150 0,170" fill="#35244A" opacity="0.3" stroke="#A259FF" stroke-width="1"/>
+    <text x="60" y="-10" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Acquisition</text>
+    <text x="60" y="90" fill="#FBF8FF" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">100%</text>
+    
+    <!-- Activation -->
+    <polygon points="120,20 260,40 260,130 120,150" fill="#35244A" opacity="0.5" stroke="#A259FF" stroke-width="1"/>
+    <text x="190" y="-10" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Activation</text>
+    <text x="190" y="90" fill="#A259FF" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">60%</text>
+
+    <!-- Retention -->
+    <polygon points="260,40 400,60 400,110 260,130" fill="#35244A" opacity="0.7" stroke="#A259FF" stroke-width="2"/>
+    <text x="330" y="-10" fill="#00F0FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Retention</text>
+    <text x="330" y="90" fill="#00F0FF" font-family="sans-serif" font-size="24" font-weight="900" text-anchor="middle">25%</text>
+    <rect x="260" y="40" width="140" height="90" fill="none" stroke="#00F0FF" stroke-width="3">
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="330" y="160" fill="#00F0FF" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">가장 중요한 병목(Bottleneck)</text>
+
+    <!-- Referral -->
+    <polygon points="400,60 540,70 540,100 400,110" fill="#35244A" opacity="0.8" stroke="#A259FF" stroke-width="1"/>
+    <text x="470" y="-10" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Referral</text>
+    <text x="470" y="90" fill="#FBF8FF" font-family="sans-serif" font-size="20" font-weight="900" text-anchor="middle">10%</text>
+
+    <!-- Revenue -->
+    <polygon points="540,70 680,80 680,90 540,100" fill="#A259FF" stroke="#00F0FF" stroke-width="2"/>
+    <text x="610" y="-10" fill="#A259FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Revenue</text>
+    <text x="610" y="90" fill="#00F0FF" font-family="sans-serif" font-size="20" font-weight="900" text-anchor="middle">4%</text>
+
+    <!-- Particles flowing through -->
+    <circle cx="0" cy="85" r="3" fill="#00F0FF">
+      <animate attributeName="cx" values="0;680" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "PM Frontend Team"
+  short_description: "Plan and build PM-learning React+Vite pages with senior Designer/PM/FE role outputs"
+  default_prompt: "Use $pm-learning-frontend-team to design and implement a PM-learning webpage with clear role-by-role decisions."
+
+policy:
+  allow_implicit_invocation: false

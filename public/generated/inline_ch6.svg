@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <rect width="800" height="250" fill="transparent"/>
+  
+  <g transform="translate(400, 125)">
+    <!-- Connection lines expanding out -->
+    <path d="M 0 0 L -180 -70" stroke="#35244A" stroke-width="4"/>
+    <path d="M 0 0 L 180 -70" stroke="#35244A" stroke-width="4"/>
+    <path d="M 0 0 L -180 70" stroke="#35244A" stroke-width="4"/>
+    <path d="M 0 0 L 180 70" stroke="#35244A" stroke-width="4"/>
+    <path d="M 0 0 L 0 -90" stroke="#A259FF" stroke-width="2" stroke-dasharray="4 4"/>
+    
+    <!-- Animating network pulse -->
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#00F0FF" stroke-width="1" opacity="0.3">
+      <animate attributeName="r" values="30;160" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Center Node (PM) -->
+    <circle cx="0" cy="0" r="45" fill="#1A1125" stroke="#00F0FF" stroke-width="4"/>
+    <circle cx="0" cy="0" r="35" fill="#35244A"/>
+    <text x="0" y="6" fill="#00F0FF" font-family="sans-serif" font-size="20" font-weight="900" text-anchor="middle">PM</text>
+    <text x="0" y="25" fill="#FBF8FF" font-family="sans-serif" font-size="10" text-anchor="middle">Hub</text>
+
+    <!-- Outer Nodes -->
+    <!-- Tech -->
+    <circle cx="-180" cy="-70" r="30" fill="#35244A" stroke="#A259FF" stroke-width="2"/>
+    <text x="-180" y="-65" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">개발(Dev)</text>
+    
+    <!-- Design -->
+    <circle cx="180" cy="-70" r="30" fill="#35244A" stroke="#A259FF" stroke-width="2"/>
+    <text x="180" y="-65" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">디자인(UX)</text>
+    
+    <!-- Marketing -->
+    <circle cx="-180" cy="70" r="30" fill="#35244A" stroke="#A259FF" stroke-width="2"/>
+    <text x="-180" y="75" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">마케팅</text>
+    
+    <!-- C-Level -->
+    <circle cx="180" cy="70" r="30" fill="#35244A" stroke="#A259FF" stroke-width="2"/>
+    <text x="180" y="75" fill="#FBF8FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">경영진</text>
+    
+    <!-- Users -->
+    <circle cx="0" cy="-90" r="20" fill="#00F0FF"/>
+    <text x="0" y="-85" fill="#1A1125" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">유저</text>
+
+    <!-- Communication Ping (Dot moving from PM to outer nodes) -->
+    <circle cx="-50" cy="-20" r="4" fill="#00F0FF">
+      <animate attributeName="cx" values="0;-180" dur="1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="0;-70" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="transparent"/>
+  
+  <!-- Greenhouse Glass Dome -->
+  <path d="M40 140 C40 50, 160 50, 160 140" fill="#35244A" opacity="0.4" stroke="#00F0FF" stroke-width="3"/>
+  <path d="M30 140 L170 140 L160 150 L40 150 Z" fill="#A259FF"/>
+  
+  <!-- Grid overlay on dome -->
+  <path d="M70 140 C70 50, 110 50, 100 140" fill="none" stroke="#A259FF" stroke-width="1" opacity="0.5"/>
+  <path d="M130 140 C130 50, 90 50, 100 140" fill="none" stroke="#A259FF" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Growing 'Data Plants' (Bar Charts expanding/contracting) -->
+  <rect x="70" y="110" width="12" height="30" fill="#00F0FF" rx="2">
+    <animate attributeName="height" values="10;40;10" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="130;100;130" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="94" y="80" width="12" height="60" fill="#A259FF" rx="2">
+    <animate attributeName="height" values="20;70;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="120;70;120" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="118" y="50" width="12" height="90" fill="#FBF8FF" rx="2" opacity="0.9">
+    <animate attributeName="height" values="50;90;50" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="y" values="90;50;90" dur="5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Sparkles / Atmosphere inside -->
+  <circle cx="100" cy="40" r="3" fill="#00F0FF">
+    <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="60" cy="80" r="2" fill="#FBF8FF">
+    <animate attributeName="opacity" values="0;0.8;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  <circle cx="140" cy="90" r="2.5" fill="#A259FF">
+    <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+</svg>

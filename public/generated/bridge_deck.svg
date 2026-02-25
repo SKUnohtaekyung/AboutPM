@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="transparent"/>
+  
+  <!-- Left Cliff face / Foundation -->
+  <path d="M20 180 L60 180 L60 120 L20 120 Z" fill="#35244A"/>
+  
+  <!-- Right Cliff face / Target -->
+  <path d="M140 180 L180 180 L180 100 L140 100 Z" fill="#35244A"/>
+  
+  <!-- Glowing Connection Data Stream (The Bridge Arc) -->
+  <path d="M60 120 C90 80, 110 90, 140 100" fill="none" stroke="#00F0FF" stroke-width="4" stroke-dasharray="12 6">
+    <animate attributeName="stroke-dashoffset" values="180;0" dur="10s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Structural Support Cables (Aesthetic) -->
+  <path d="M60 120 L140 100" stroke="#A259FF" stroke-width="2" opacity="0.6"/>
+  <path d="M80 115 L80 140" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.5"/>
+  <path d="M100 111 L100 150" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.5"/>
+  <path d="M120 106 L120 160" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.5"/>
+
+  <!-- Core Bridge Node (The Leader) -->
+  <circle cx="100" cy="111" r="5" fill="#FBF8FF">
+    <animate attributeName="cy" values="107;115;107" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Connecting Particles -->
+  <circle cx="80" cy="115" r="3" fill="#A259FF"/>
+  <circle cx="120" cy="106" r="3" fill="#A259FF"/>
+</svg>

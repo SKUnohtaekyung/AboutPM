@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <rect width="800" height="250" fill="transparent"/>
+  
+  <g transform="translate(50, 75)">
+    <!-- First Diamond (Discover & Define) -->
+    <path d="M 0 50 L 150 0 L 300 50 L 150 100 Z" fill="none" stroke="#A259FF" stroke-width="3" stroke-dasharray="6 6"/>
+    <text x="150" y="55" fill="#A259FF" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">올바른 문제 찾기</text>
+    <circle cx="150" cy="50" r="80" fill="#A259FF" opacity="0.05"/>
+    
+    <text x="75" y="130" fill="#FBF8FF" font-family="sans-serif" font-size="14" text-anchor="middle" opacity="0.7">발산 (Discover)</text>
+    <text x="225" y="130" fill="#FBF8FF" font-family="sans-serif" font-size="14" text-anchor="middle" opacity="0.7">수렴 (Define)</text>
+    
+    <!-- Connection Node -->
+    <circle cx="300" cy="50" r="8" fill="#00F0FF"/>
+    <text x="300" y="25" fill="#00F0FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">진짜 문제 (Core Problem)</text>
+    
+    <!-- Second Diamond (Develop & Deliver) -->
+    <path d="M 300 50 L 450 0 L 600 50 L 450 100 Z" fill="none" stroke="#FBF8FF" stroke-width="2" opacity="0.8"/>
+    <text x="450" y="55" fill="#FBF8FF" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">올바른 해결책 찾기</text>
+    <circle cx="450" cy="50" r="80" fill="#FBF8FF" opacity="0.05"/>
+    
+    <text x="375" y="130" fill="#FBF8FF" font-family="sans-serif" font-size="14" text-anchor="middle" opacity="0.7">발산 (Develop)</text>
+    <text x="525" y="130" fill="#FBF8FF" font-family="sans-serif" font-size="14" text-anchor="middle" opacity="0.7">수렴 (Deliver)</text>
+
+    <!-- Final Outcome -->
+    <circle cx="600" cy="50" r="12" fill="#35244A" stroke="#00F0FF" stroke-width="3"/>
+    <circle cx="600" cy="50" r="4" fill="#00F0FF">
+      <animate attributeName="r" values="2;6;2" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="600" y="25" fill="#00F0FF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">MVP 출시</text>
+  </g>
+</svg>

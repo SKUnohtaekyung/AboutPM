@@ -1,0 +1,44 @@
+<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="220" y1="100" x2="1220" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#F3EEFF" />
+    </linearGradient>
+    <linearGradient id="card1" x1="230" y1="170" x2="560" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#AF97FF" stop-opacity="0.78" />
+      <stop offset="1" stop-color="#7652FF" stop-opacity="0.36" />
+    </linearGradient>
+    <linearGradient id="card2" x1="500" y1="170" x2="820" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C3B1FF" stop-opacity="0.86" />
+      <stop offset="1" stop-color="#7A59FF" stop-opacity="0.32" />
+    </linearGradient>
+    <linearGradient id="card3" x1="780" y1="160" x2="1140" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CDBFFF" stop-opacity="0.84" />
+      <stop offset="1" stop-color="#896CFF" stop-opacity="0.32" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="900" rx="44" fill="url(#bg)" />
+  <path d="M80 700C260 620 380 770 560 700C700 644 830 564 1010 632C1130 676 1250 660 1360 620V900H80V700Z" fill="#A88DFF" fill-opacity="0.22" />
+
+  <g transform="translate(180 180) rotate(-8)">
+    <rect x="0" y="96" width="360" height="496" rx="36" fill="#FFFFFF" fill-opacity="0.52" />
+    <rect x="0" y="0" width="360" height="496" rx="36" fill="url(#card1)" stroke="#FFFFFF" stroke-opacity="0.72" />
+    <text x="34" y="104" fill="#FDFBFF" font-size="52" font-family="Sora, Arial, sans-serif" font-weight="700">Foundation</text>
+    <text x="34" y="418" fill="#EDE6FF" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="500">01</text>
+  </g>
+
+  <g transform="translate(470 150) rotate(-2)">
+    <rect x="0" y="90" width="360" height="516" rx="36" fill="#FFFFFF" fill-opacity="0.48" />
+    <rect x="0" y="0" width="360" height="516" rx="36" fill="url(#card2)" stroke="#FFFFFF" stroke-opacity="0.74" />
+    <text x="34" y="106" fill="#FEFCFF" font-size="52" font-family="Sora, Arial, sans-serif" font-weight="700">Discovery</text>
+    <text x="34" y="434" fill="#EEE8FF" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="500">02</text>
+  </g>
+
+  <g transform="translate(760 126) rotate(5)">
+    <rect x="0" y="94" width="360" height="516" rx="36" fill="#FFFFFF" fill-opacity="0.46" />
+    <rect x="0" y="0" width="360" height="516" rx="36" fill="url(#card3)" stroke="#FFFFFF" stroke-opacity="0.76" />
+    <text x="34" y="106" fill="#FEFCFF" font-size="52" font-family="Sora, Arial, sans-serif" font-weight="700">Delivery</text>
+    <text x="34" y="434" fill="#F0EAFF" font-size="78" font-family="Sora, Arial, sans-serif" font-weight="500">03</text>
+  </g>
+</svg>

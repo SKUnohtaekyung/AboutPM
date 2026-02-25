@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250">
+  <defs>
+    <linearGradient id="glowBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A259FF"/>
+      <stop offset="100%" stop-color="#35244A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="250" fill="transparent"/>
+
+  <!-- Left: Venn Diagram -->
+  <g transform="translate(150, 20)">
+    <!-- Tech Circle -->
+    <circle cx="100" cy="80" r="70" fill="none" stroke="#00F0FF" stroke-width="3" stroke-dasharray="4 4"/>
+    <text x="50" y="60" fill="#00F0FF" font-family="sans-serif" font-size="20" font-weight="bold">Tech</text>
+    
+    <!-- Biz Circle -->
+    <circle cx="200" cy="80" r="70" fill="none" stroke="#A259FF" stroke-width="3" opacity="0.8"/>
+    <text x="210" y="60" fill="#A259FF" font-family="sans-serif" font-size="20" font-weight="bold">Business</text>
+    
+    <!-- UX Circle -->
+    <circle cx="150" cy="150" r="70" fill="none" stroke="#FBF8FF" stroke-width="2" opacity="0.6"/>
+    <text x="135" y="190" fill="#FBF8FF" font-family="sans-serif" font-size="20" font-weight="bold">UX</text>
+    
+    <!-- Intersection (PM) -->
+    <circle cx="150" cy="110" r="25" fill="#00F0FF" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="135" y="115" fill="#00F0FF" font-family="sans-serif" font-size="18" font-weight="800">PM</text>
+  </g>
+
+  <!-- Connection Line -->
+  <path d="M 400 125 L 480 125" stroke="#35244A" stroke-width="4" stroke-dasharray="8 8"/>
+  <polygon points="480,115 500,125 480,135" fill="#35244A"/>
+
+  <!-- Right: Balancing Role -->
+  <g transform="translate(530, 60)">
+    <rect x="0" y="0" width="180" height="130" rx="15" fill="#1A1125" stroke="#A259FF" stroke-width="2"/>
+    <text x="90" y="40" fill="#FBF8FF" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">핵심 조율자 (Orchestrator)</text>
+    
+    <rect x="20" y="60" width="140" height="8" rx="4" fill="#35244A"/>
+    <rect x="20" y="60" width="60" height="8" rx="4" fill="#00F0FF">
+      <animate attributeName="width" values="40;100;40" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <rect x="20" y="85" width="140" height="8" rx="4" fill="#35244A"/>
+    <rect x="20" y="85" width="90" height="8" rx="4" fill="#A259FF">
+      <animate attributeName="width" values="100;50;100" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

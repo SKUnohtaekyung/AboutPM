@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="towerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A259FF"/>
+      <stop offset="100%" stop-color="#35244A"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="200" height="200" fill="transparent"/>
+  
+  <!-- Radiating signals -->
+  <circle cx="100" cy="50" r="30" fill="none" stroke="#A259FF" stroke-width="2" opacity="0.4">
+    <animate attributeName="r" values="30;50;70" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.1;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="50" r="40" fill="none" stroke="#00F0FF" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="r" values="40;60;80" dur="3s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="opacity" values="0.6;0.2;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+
+  <!-- Base structure -->
+  <path d="M80 200 L120 200 L110 80 L90 80 Z" fill="url(#towerGrad)"/>
+  
+  <!-- Tower head -->
+  <path d="M70 80 L130 80 L140 40 L60 40 Z" fill="#35244A" stroke="#00F0FF" stroke-width="3"/>
+  <rect x="75" y="45" width="15" height="25" fill="#00F0FF" rx="2" opacity="0.8"/>
+  <rect x="95" y="45" width="10" height="25" fill="#00F0FF" rx="2" opacity="0.9"/>
+  <rect x="110" y="45" width="15" height="25" fill="#00F0FF" rx="2" opacity="0.8"/>
+  
+  <!-- Radar antenna -->
+  <path d="M100 40 L100 20" stroke="#FBF8FF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M100 20 C110 10, 120 15, 120 15" fill="none" stroke="#A259FF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="20" r="4" fill="#00F0FF"/>
+  
+  <!-- Ground beam -->
+  <path d="M90 80 L110 80 L140 200 L60 200 Z" fill="url(#cyanGlow)" opacity="0.3"/>
+</svg>
