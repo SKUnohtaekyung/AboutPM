@@ -58,14 +58,19 @@ button {
 
 .app-root.hub-active {
   background: var(--bg-main);
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .app-root.hub-active {
+    overflow: hidden;
+  }
 }
 
 .app-root.spoke-active {
   background: var(--bg-main);
-  padding-bottom: 96px;
 }
 
 /* 4K Abstract SVG Background Overlay */
@@ -89,10 +94,10 @@ button {
 .toss-hub-layout {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   z-index: 10;
 }
 
@@ -100,6 +105,8 @@ button {
   .toss-hub-layout {
     flex-direction: row;
     align-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
@@ -157,6 +164,13 @@ button {
   gap: 20px;
 }
 
+@media (max-width: 767px) {
+  .toss-instruction-box {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+}
+
 .icon-pulse {
   width: 14px;
   height: 14px;
@@ -208,7 +222,9 @@ button {
 .toss-right-panel {
   flex: 1;
   position: relative;
-  height: 100vh;
+  height: 60vh;
+  /* Shorter on mobile, letting scroll pass */
+  min-height: 480px;
   width: 100%;
 }
 
@@ -279,20 +295,20 @@ button {
 }
 
 .split-left {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 24px 20px 24px;
+  background: rgba(251, 248, 255, 0.85);
+  backdrop-filter: blur(20px);
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
   .split-left {
-    display: flex;
-    flex-direction: column;
     width: 35%;
     height: 100vh;
     padding: 80px 48px;
     border-right: 1px solid var(--line-light);
-    background: rgba(251, 248, 255, 0.85);
-    backdrop-filter: blur(20px);
-    z-index: 10;
   }
 }
 
@@ -352,7 +368,7 @@ button {
 
 .split-right {
   width: 100%;
-  padding: 96px 24px 0 24px;
+  padding: 24px 24px 0 24px;
   background: var(--bg-main);
 }
 
@@ -504,10 +520,12 @@ button {
 }
 
 .markdown-body img {
-  max-width: 100%;
+  max-width: 600px;
+  width: 100%;
   border-radius: var(--radius-lg);
-  margin: 32px 0;
+  margin: 32px auto;
   box-shadow: var(--shadow-soft);
+  display: block;
 }
 
 .markdown-body hr {

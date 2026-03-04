@@ -90,7 +90,7 @@ function NetworkGraphView({ onSelect }: { onSelect: (id: string) => void }) {
       nodes.push({
         id: chapter.id,
         name: chapter.title,
-        labelText: chapter.title.replace('Chapter ', 'Ch.'), // Shorter label
+        labelText: `Ch.${i + 1} ${chapter.title}`,
         val: chapterVal,
         colorHex: '#35244A',
         opacity: 0.95,
@@ -269,36 +269,27 @@ function ChapterDetail({ chapter, onBack }: { chapter: CurriculumChapter; onBack
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: "bottom bottom",
-        pin: leftPaneRef.current,
-        pinSpacing: false,
-        onUpdate: (self) => {
-          setScrollProgress(self.progress * 100);
-        }
+      const mm = gsap.matchMedia();
+
+      mm.add({
+        isDesktop: "(min-width: 768px)",
+        isMobile: "(max-width: 767px)"
+      }, (context) => {
+        const { isDesktop } = context.conditions as { isDesktop: boolean; isMobile: boolean };
+
+        ScrollTrigger.create({
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          pin: isDesktop ? leftPaneRef.current : false,
+          pinSpacing: false,
+          onUpdate: (self) => {
+            setScrollProgress(self.progress * 100);
+          }
+        });
       });
 
-      if (rightPaneRef.current) {
-        const blocks = rightPaneRef.current.querySelectorAll('.markdown-body h2, .markdown-body h3, .markdown-body p, .markdown-body ul, .analogy-block');
-        blocks.forEach((block) => {
-          gsap.fromTo(block,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: block,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-              }
-            }
-          );
-        });
-      }
+
     }, containerRef);
 
     return () => ctx.revert();
