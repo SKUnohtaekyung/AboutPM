@@ -68,6 +68,16 @@ type Link = { source: string; target: string; color: string; width: number };
 function NetworkGraphView({ onSelect }: { onSelect: (id: string) => void }) {
   const fgRef = useRef<ForceGraphMethods>();
   const [graphData, setGraphData] = useState({ nodes: [] as Node[], links: [] as Link[] });
+  const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+
+  // Handle Dynamic Resize for WebView/Mobile
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const nodes: Node[] = [];
@@ -134,22 +144,25 @@ function NetworkGraphView({ onSelect }: { onSelect: (id: string) => void }) {
   // Post-mount forces adjustment for 70% link length
   useEffect(() => {
     if (fgRef.current && graphData.nodes.length > 0) {
+      const isMobile = windowSize.width < 1024;
+
       // Pull nodes much closer together (default distance is ~30, setting shorter)
       const linkForce = fgRef.current.d3Force('link');
       if (linkForce) {
         linkForce.distance((link: any) => {
           // Shorter links for subnodes, slightly longer for core
-          return link.source.id === 'hub_core' ? 80 : 40;
+          const baseDistance = link.source.id === 'hub_core' ? 80 : 40;
+          return isMobile ? baseDistance * 0.7 : baseDistance;
         });
       }
 
       // Increase repulsion slightly to balance
       const chargeForce = fgRef.current.d3Force('charge');
       if (chargeForce) {
-        chargeForce.strength(-200);
+        chargeForce.strength(isMobile ? -150 : -200);
       }
     }
-  }, [graphData]);
+  }, [graphData, windowSize.width]);
 
   const handleNodeClick = useCallback(
     (node: any) => {
@@ -196,13 +209,15 @@ function NetworkGraphView({ onSelect }: { onSelect: (id: string) => void }) {
         </div>
       </div>
 
-      {/* 2. Right Panel (3D Graph Container - Shifted Leftward via CSS) */}
       <div className="toss-right-panel">
         <ForceGraph3D
           ref={fgRef}
           graphData={graphData}
           nodeLabel="name"
           nodeRelSize={3} // HUGE SCALE
+
+          width={windowSize.width < 1024 ? windowSize.width : windowSize.width * 0.75}
+          height={windowSize.width < 1024 ? windowSize.height * 0.6 : windowSize.height}
 
           nodeThreeObject={node => {
             const typedNode = node as Node;
