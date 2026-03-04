@@ -12,12 +12,12 @@
 ## 🖼 Screenshots
 
 ### 🌌 3D 지식 네트워크 허브 (Main Hub)
-![AboutPM Main Hub](./public/hub_main.png)
+![AboutPM Main Hub](./public/main.png)
 - **우주 탐험 UX**: 모든 챕터가 유기적으로 연결된 3D 성계에서 마우스 드래그로 회전하고, 노드를 클릭하여 즉시 워프할 수 있습니다.
 - **직관적 위계**: 챕터별 크기와 색상 구분을 통해 전체 커리큘럼의 흐름을 한눈에 파악합니다.
 
 ### 📖 프리미엄 독서 경험 (Lesson Detail)
-![AboutPM Lesson Detail](./public/lesson_detail.png)
+![AboutPM Lesson Detail](./public/sub.png)
 - **압도적 가독성**: 토스 디자인 시스템 영감을 받은 세련된 타이포그래피와 여백을 제공합니다.
 - **핵심 정보 구조**: 학습 목표, 핵심 용어, 본문, 그리고 실무 체크리스트로 구성된 체계적인 레이아웃을 갖추고 있습니다.
 
