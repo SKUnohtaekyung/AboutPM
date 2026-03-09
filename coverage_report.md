@@ -1,5 +1,5 @@
 # PM 학습 사이트 커리큘럼 Coverage Report
-> 생성 일시: 2026-03-04T16:00:40.217Z
+> 생성 일시: 2026-03-09T18:13:34.470Z
 > **Source of Truth:** curriculumPlanner.json
 
 ---
@@ -8,7 +8,7 @@
 
 - **0 Omission Check:** 🟢 통과 (전체 222개 블록 중복/누락 없이 매핑)
 - **Prerequisites Cycle Check:** 🟢 통과 (순환/오류 참조 없음)
-- **구조 통계:** 7개 챕터, 32개 레슨 정상 조립 완료
+- **구조 통계:** 7개 챕터, 31개 레슨 정상 조립 완료
 
 ---
 
@@ -164,8 +164,8 @@
 | ab-0136 | ai/ai3.md | L1~L2 | ch-06-ls-03 |
 | ab-0137 | ai/ai3.md | L3~L8 | ch-06-ls-03 |
 | ab-0138 | ai/ai3.md | L9~L11 | ch-06-ls-03 |
-| ab-0139 | ai/ai3.md | L12~L16 | ch-06-ls-04 |
-| ab-0140 | ai/ai3.md | L17~L22 | ch-06-ls-04 |
+| ab-0139 | ai/ai3.md | L12~L16 | ch-06-ls-03 |
+| ab-0140 | ai/ai3.md | L17~L22 | ch-06-ls-03 |
 | ab-0141 | BM.md | L1~L1 | ch-07-ls-01 |
 | ab-0142 | BM.md | L2~L16 | ch-07-ls-01 |
 | ab-0143 | BM.md | L17~L33 | ch-07-ls-01 |
